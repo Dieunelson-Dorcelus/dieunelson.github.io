@@ -1,0 +1,32 @@
+{%- include head.html -%}
+
+<body data-spy="scroll" data-target=".fixed-top">
+    
+    {%- include nav.html -%}
+
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="text-container">
+                        <h1>Dieunelson DORCELUS <br><span id="js-rotating">DEVELOPEUR, FREELANCE, CONSULTANT</span></h1>
+                        <p class="p-large">Vous avez une idée, un projet et vous avez besoin d'aide pour avancer ?<br> N'attendez plus, contactez moi !</p>
+                        <a class="btn-solid-lg" href="mailto:{{site.email}}" target="_blank"><i class="fas fa-at"></i> Email</a>
+                        <a class="btn-solid-lg" href="https://linkedin.com/in/{{site.linkedin_username}}" target="_blank"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
+                        <a class="btn-solid-lg" href="https://github.com/{{site.github_username}}" target="_blank"><i class="fab fa-github"></i>Github</a>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <img class="img-fluid" src="vendor/images/Dieunelson-ICON-1000x1000-2.png" alt="alternative">
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of header -->
+    <!-- end of header -->
+
+    {{content}}    
+
+
+{%- include footer.html -%}

@@ -1,0 +1,102 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: default
+title: Accueil
+image: vendor/images/Dieunelson-ICON-1000x1000-2.png
+---
+
+{%- assign basic = 2 -%}
+<h2 style="text-align: center;margin-top: 100px;text-transform: uppercase;">&#711; Mes Projets &#711;</h2>
+    
+    {%- for project in site.projects reversed -%}
+    
+        <span style="display: none;">{%- increment project_count -%}</span>
+        <!-- Details 1 -->
+        <div class="basic-{{basic}} bg-dark-blue">
+            <div class="container">
+                <div class="row">
+
+                    {%- if basic==2 -%}
+                        <div class="col-lg-6">
+                            <div class="image-container">
+                                <img class="img-fluid" src="{{project.image_home}}" alt="{{project.title}}" style="box-shadow: -12px 12px 2px 5px #2f2c3d;border-radius: 30px;">
+                            </div> <!-- end of image-container -->
+                        </div> <!-- end of col -->
+                        <div class="col-lg-6">
+                            <div class="text-container">
+                                <div class="badges">
+                                    {%- for badge in project.badges -%}
+                                        {%- assign badge_arr = badge | split: '|' -%}
+                                        <span class="badge" style="background-color: {{badge_arr[1]}}">{{badge_arr[0]}}</span>
+                                    {%- endfor -%}
+                                </div>
+                                <h2>{{project.title}}</h2>
+                                <p>{{project.presentation}}</p>
+                                <a class="btn-solid-reg popup-with-move-anim" href="#details-{{project_count}}-lightbox">Voir</a>
+                            </div> <!-- end of text-container -->
+                        </div> <!-- end of col -->
+                    {%- else -%}
+                        <div class="col-lg-6">
+                            <div class="text-container">
+                                <div class="badges">
+                                    {%- for badge in project.badges -%}
+                                        {%- assign badge_arr = badge | split: '|' -%}
+                                        <span class="badge" style="background-color: {{badge_arr[1]}}">{{badge_arr[0]}}</span>
+                                    {%- endfor -%}
+                                </div>
+                                <h2>{{project.title}}</h2>
+                                <p>{{project.presentation}}</p>
+                                <a class="btn-solid-reg popup-with-move-anim" href="#details-{{project_count}}-lightbox">Voir</a>
+                            </div> <!-- end of text-container -->
+                        </div> <!-- end of col -->
+                        <div class="col-lg-6">
+                            <div class="image-container">
+                                <img class="img-fluid" src="{{project.image_home}}" alt="{{project.title}}" style="box-shadow: 12px 12px 2px 5px #2f2c3d;border-radius: 30px;">
+                            </div> <!-- end of image-container -->
+                        </div> <!-- end of col -->
+                    {%- endif -%}
+                    
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of basic-{{basic}} -->
+        <!-- end of details 1 -->
+
+
+        <!-- Details 1 Lightbox -->
+        <!-- Lightbox -->
+        <div id="details-{{project_count}}-lightbox" class="lightbox-basic zoom-anim-dialog mfp-hide">
+            <div class="row">
+                <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+                <div class="col-lg-8">
+                    <div class="image-container">
+                        <img class="img-fluid" src="{{project.image}}" alt="{{project.title}}">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <h3>Objectifs</h3>
+                    <hr>
+                    <p>{{project.goals}}</p>
+                    <h4>Technologies</h4>
+                    <hr>
+                    <ul class="list-unstyled li-space-lg">
+                        {%- for technologie in project.technologies -%}
+                            <li class="media">
+                                <i class="fas fa-check"></i><div class="media-body">{{technologie}}</div>
+                            </li>
+                        {%- endfor -%}
+                    </ul>
+                    <a class="btn-solid-reg mfp-close page-scroll" href="{{project.go}}" target="_blank">Go</a> <button class="btn-outline-reg mfp-close as-button" type="button">Retour</button>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of lightbox-basic -->
+        <!-- end of lightbox -->
+        <!-- end of details 1 lightbox -->
+
+        {%- if basic==2 -%}
+            {%- assign basic = 3 -%}
+        {% else %}
+            {%- assign basic = 2 -%}
+        {%- endif -%}
+    {%- endfor -%}
