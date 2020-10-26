@@ -6,14 +6,10 @@ go : https://github.com/Dieunelson-Dorcelus/Dieunelson-Dorcelus.github.io
 image_home : /assets/images/Dieunelson-FULL-BACKGROUND.png
 image : /assets/images/Dieunelson-FULL-1000x1000.png
 technologies : 
-    - react
-    - nodejs
-    - express
-    - docker
-    - firebase
-    - mongodb
+    - jekyll
+    - bootstrap
 badges :
     - En cours | green
     - Creation | brown
-    - Jeu | blue
+    - Site web | gray
 ---
