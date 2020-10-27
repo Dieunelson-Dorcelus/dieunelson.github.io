@@ -1,0 +1,26 @@
+{%- include head.html -%}
+
+<body data-spy="scroll" data-target=".fixed-top">
+    
+    {%- include nav.html -%}
+
+
+    <!-- Header -->
+    <header class="ex-header bg-light-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+                    <h1>{{page.title}}</h1>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of ex-header -->
+    <!-- end of header -->
+
+    
+    <div class="bg-dark-blue" style="padding-top: 50px;padding-bottom: 20px;">
+        {{content}}
+    </div> 
+
+
+{%- include footer.html -%}
