@@ -6,7 +6,7 @@ go : https://github.com/Dieunelson-Dorcelus/rsspipeline
 image_home : https://raw.githubusercontent.com/Dieunelson-Dorcelus/rsspipeline/main/Capture.PNG
 image : https://raw.githubusercontent.com/Dieunelson-Dorcelus/rsspipeline/main/Capture.PNG
 technologies : 
-    - VueJS
+    - vuejs
     - nodejs
 badges :
     - En cours | green
