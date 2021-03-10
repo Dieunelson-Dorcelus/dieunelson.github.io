@@ -3,7 +3,7 @@ title: ShortLink
 presentation : ShortLink est une application qui permet de reduire les URLs
 goals : Créer une application qui permet de réduire les URLs.
 go : https://shortlink.dlsn.fr
-image_home : https://shortlink.dlsn.fr/Capture.PNG
+image_home : /assets/images/Screenshot-Shortlink.png
 image : https://shortlink.dlsn.fr/Capture.PNG
 technologies : 
     - vuejs
